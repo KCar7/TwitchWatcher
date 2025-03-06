@@ -1,0 +1,52 @@
+# Version control
+.git/
+.github/
+.gitignore
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Development environments
+env/
+venv/
+ENV/
+.env
+.venv
+
+# Build artifacts
+build/
+dist/
+*.spec
+*.exe
+*.zip
+*.tmp
+appimage/
+
+# Windows-specific
+*.bat
+
+# Build scripts (except our Docker scripts)
+build.sh
+pack.bat
+run_dev.bat
+setup_env.bat
+setup_env.sh
+
+# Data files that should be in volume, not image
+data/
+*.jar
+log.txt
+dump.dat
+lock.file
+settings.json
+
+# Our run scripts don't need to be in the image
+!run.sh
+!run-headless.sh

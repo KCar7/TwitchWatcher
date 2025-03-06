@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  # Default service with GUI enabled
+  twitch-watcher:
+    build:
+      context: .
+      args:
+        WITH_GUI: "true"
+    container_name: twitch-watcher
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+    network_mode: "host"
+
+  # Headless version without GUI dependencies
+  twitch-watcher-headless:
+    profiles:
+      - headless
+    build:
+      context: .
+      args:
+        WITH_GUI: "false"
+    container_name: twitch-watcher-headless
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+    environment:
+      - DISPLAY=
+    network_mode: "host"
+    command: python main.py --log
