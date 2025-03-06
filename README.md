@@ -154,3 +154,4 @@ placed past the period character at the end.
 @Shofuu - For the entirety of the Spanish (Español) translation and revisions.  
 @alikdb - For the entirety of the Turkish (Türkçe) translation.  
 @Nollasko - For the entirety of the Ukrainian (Українська) translation and revisions.  
+"# TwitchWatcher" 
